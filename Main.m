@@ -2,7 +2,7 @@ clc;
 clear all;
 close all;
 
-User_1=[0.42 0.42 0.42 0.5 0.5 0.6 0.7 0.2 0.2 0.3 0.2 0.4 0.4 0.4 0.4 0.3 0.2 0.6 0.7 0.84 0.84 0.84 0.25 0;
+User_1 = [0.42 0.42 0.42 0.5 0.5 0.6 0.7 0.2 0.2 0.3 0.2 0.4 0.4 0.4 0.4 0.3 0.2 0.6 0.7 0.84 0.84 0.84 0.25 0;
 0 0 0 0 0 0 0 0 0.11 0.11 0.11 0.11 0 0 0 0 0 0 0.11 0.11 0.11 0 0 0;
 0 0 0 0 0 0 0 0 0 0.03 0.08 0.08 0.08 0.08 0 0 0 0 0.08 0.08 0.03 0 0 0;
 0 0 0 0 0 0 0 0 0 0.42 0.75 0.31 0 0 0 0 0.84 0.21 0 0 0 0 0 0;
@@ -14,7 +14,7 @@ User_1=[0.42 0.42 0.42 0.5 0.5 0.6 0.7 0.2 0.2 0.3 0.2 0.4 0.4 0.4 0.4 0.3 0.2 0
 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0.7 0 0 0 0 0 0;
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 3 0 0 0];
 
-User_2=[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+User_2 = [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
@@ -26,7 +26,7 @@ User_2=[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0];
 
-User_3=[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+User_3 = [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
@@ -85,20 +85,10 @@ end
 
 fprintf('Cost After GA: %s\n', num2str(Generation_Cost_After_Shifting));
 
-Agg_Load_Before=Crossover_Before_Shifting;
-Peak_Load_Before=max(Crossover_Before_Shifting);
-Avg_Load_Before=(sum(Crossover_Before_Shifting))/24;
-PAR_Before=Peak_Load_Before/Avg_Load_Before;
-
-Agg_Load_After=Generation_After_Shifting;
-Peak_Load_After=max(Generation_After_Shifting);
-Avg_Load_After=(sum(Generation_After_Shifting))/24;
-PAR_After=Peak_Load_After/Avg_Load_After;
-
 %Load curve User 1 w/o GA
 figure
-t=1:Time;
-stairs(t,load1);
+t = 1:Time;
+stairs(t, load1);
 legend('Without Using GA');
 title('Total Load Curve User 1');
 xlabel('Time');
@@ -107,8 +97,8 @@ grid minor;
 
 %Load Curve User 2 w/o GA
 figure
-t=1:Time;
-stairs(t,load2);
+t = 1:Time;
+stairs(t, load2);
 legend('Without Using GA', 'location', 'northwest');
 title('Total Load Curve User 2');
 xlabel('Time');
@@ -117,8 +107,8 @@ grid minor;
 
 %Load Curve User 3 w/o GA
 figure
-t=1:Time;
-stairs(t,load3);
+t = 1:Time;
+stairs(t, load3);
 legend('Without Using GA');
 title('Total Load Curve User 3');
 xlabel('Time');
@@ -127,8 +117,8 @@ grid minor;
 
 %Load Curve all Users w/o GA
 figure
-t=1:Time;
-stairs(t,Totalload);
+t = 1:Time;
+stairs(t, Totalload);
 legend('Without Using GA');
 title('Total Load Curve');
 xlabel('Time');
@@ -137,7 +127,7 @@ grid minor;
 
 %Comparison with and w/o GA
 figure
-t=1:Time;
+t = 1:Time;
 stairs(t, Crossover_Before_Shifting);
 hold on;
 stairs(t, Generation_After_Shifting, 'r');
@@ -150,10 +140,10 @@ grid minor;
 
 %Cost curve with GA
 figure
-t=1:Time;
+t = 1:Time;
 stairs(t, hourcost1);
 hold on;
-stairs(t,hourcost);
+stairs(t, hourcost);
 hold off;
 grid minor;
 legend('without Using GA','with using GA', 'location', 'northwest');

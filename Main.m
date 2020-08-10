@@ -51,7 +51,7 @@ fixed_Devices = size(User_1,1) - movable_Devices;
 Time = 24;
 
 Crossover_Before_Shifting = sum(User_1) + sum(User_2) + sum(User_3);
-[Temp_User_1, Temp_User_2, Temp_User_3] = Mutation(User_1, User_2, User_3, crossover, movable_Devices);
+[Temp_User_1, Temp_User_2, Temp_User_3] = Process(User_1, User_2, User_3, movable_Devices);
 Generation_After_Shifting = sum(Temp_User_1) + sum(Temp_User_2) + sum(Temp_User_3);
 
 Generation_Cost_Before_Shifting = 0;

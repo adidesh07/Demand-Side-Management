@@ -1,4 +1,4 @@
-function [Temp_User_1, Temp_User_2, Temp_User_3] = Process(User_1, User_2, User_3, Fixed_Devices)
+function [Temp_User_1, Temp_User_2, Temp_User_3] = Mutation(User_1, User_2, User_3, Fixed_Devices)
 
 Temp_User_1 = mut_process(User_1, Fixed_Devices);
 Temp_User_2 = mut_process(User_2, Fixed_Devices);

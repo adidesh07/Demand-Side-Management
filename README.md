@@ -7,9 +7,8 @@ curve of the grid. Dynamic pricing for consumption is considered.
 
 ## Load Shifting Process
 The per hour consumption of different appliances of the consumer is given as input in a matrix.
-The appliances are separated into two categories: Shiftable and non-shiftable.
-
-In case of use of shiftable appliance during peak hours when per unit cost of consumption is higher, the use of appliance
+The appliances are separated into two categories: Shiftable and Non-Shiftable.
+In case of use of shiftable appliance during peak hours, when per unit cost of consumption is higher, the use of said appliance
 is switched to an off-peak hour.
 
 Note: The consumer has the choice to use any appliance during any hour if they wish to. The algorithm can be set according to the need of the consumer.

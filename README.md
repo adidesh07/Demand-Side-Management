@@ -12,8 +12,7 @@ The appliances are separated into two categories: Shiftable and non-shiftable.
 In case of use of shiftable appliance during peak hours when per unit cost of consumption is higher, the use of appliance
 is switched to an off-peak hour.
 
-Note: The consumer has the total control whether to use appliance during any hour if they choose.
-The algorithm can be set according to the need of the consumer.
+Note: The consumer has the choice to use any appliance during any hour if they wish to. The algorithm can be set according to the need of the consumer.
 
 ## Cost Comparison
 This is a sample output for an arbitrary consumer for demonstration purposes.

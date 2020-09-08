@@ -20,4 +20,6 @@ This is a sample output for an arbitrary consumer for demonstration purposes.
 
 The algorithm results in over 25% savings of per-day cost of consumption for the consumer.
 
-![](Images/Savings.png)
+    Per-day cost before algorithm (in Rupees): 268.345
+    Per-day cost after algorithm (in Rupees): 196.385
+    Percent Saving: 26.8162%

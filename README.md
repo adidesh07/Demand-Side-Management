@@ -1,5 +1,6 @@
 # Cost saving algorithm
-###### A cost saving algorithm for potential future use in smart meters.
+###### Created by: Aditya Deshmukh
+#### A cost saving algorithm for potential future use in smart meters.
 
 This is a Matlab project which uses a cost saving algorithm. 
 It yields a reduced cost, for per day electricity consumption (kWh), for the consumer, by implementing load shifting and thereby flattens the load
